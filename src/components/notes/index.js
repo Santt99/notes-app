@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Note from './Note';
 
-export default function NotesList() {
-	const [notes] = useState([]);
+export default function NotesList({ notes }) {
 	return notes.map(({ title, note }, index) => {
 		return (
 			<div className="col s4">

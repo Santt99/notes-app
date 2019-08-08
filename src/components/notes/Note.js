@@ -2,9 +2,9 @@ import React from 'react';
 
 function Note({ title, note }) {
 	return (
-		<div class="card indigo lighten-2">
-			<div class="card-content white-text">
-				<span class="card-title">{title}</span>
+		<div className="card indigo lighten-2">
+			<div className="card-content white-text">
+				<span className="card-title">{title}</span>
 				<p>{note}</p>
 			</div>
 		</div>

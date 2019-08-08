@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 export default function Navbar() {
 	return (
-		<div class="navbar-fixed">
+		<div className="navbar-fixed">
 			<nav className="indigo darken-4">
 				<div className="container">
-					<div class="nav-wrapper ">
-						<span class="brand-logo">Noap</span>
-						<ul class="right hide-on-med-and-down">
+					<div className="nav-wrapper ">
+						<span className="brand-logo">Noap</span>
+						<ul className="right hide-on-med-and-down">
 							<li>
 								<Link to="/">Notes</Link>
 							</li>
