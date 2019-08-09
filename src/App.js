@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import './App.css';
 import Navbar from './components/layout/Navbar';
 import NotesList from './components/notes';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import NewNote from './components/notes/NewNote';
 
 import { connect } from 'react-redux';
@@ -13,8 +13,9 @@ const App = ({ notes }) => {
 			<Router>
 				<Navbar />
 				<div className="container internal">
+					<Redirect from="/" to="/notes" />
 					<Route
-						path="/"
+						path="/notes"
 						render={(props) => {
 							return <NotesList {...props} notes={notes} />;
 						}}

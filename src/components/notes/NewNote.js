@@ -27,7 +27,7 @@ const NewNote = ({ addNote }) => {
 					</div>
 				</div>
 				<div className="row right">
-					<Link to="/">
+					<Link to="/notes">
 						<button
 							className="btn-large indigo darken-4 waves-effect waves-light"
 							name="action"

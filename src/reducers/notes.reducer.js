@@ -4,6 +4,9 @@ const initialState = [];
 
 export default (state = initialState, action) => {
 	const { type, payload } = action;
-	if (type === NOTE_ADD) return state.push(payload);
+	if (type === NOTE_ADD){
+		state.push(payload);
+		return state;
+	} 
 	else return initialState;
 };
