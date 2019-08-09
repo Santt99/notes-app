@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import * as Actions from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-
+import { Link } from 'react-router-dom';
 const NewNote = ({ addNote }) => {
 	const [title, setTitle] = useState('');
 	const [note, setNote] = useState('');
@@ -27,14 +27,15 @@ const NewNote = ({ addNote }) => {
 					</div>
 				</div>
 				<div className="row right">
-					<button
-						className="btn-large indigo darken-4 waves-effect waves-light"
-						type="submit"
-						name="action"
-						onClick={() => addNote(title, note)}>
-						Create
-						<i className="material-icons right">send</i>
-					</button>
+					<Link to="/">
+						<button
+							className="btn-large indigo darken-4 waves-effect waves-light"
+							name="action"
+							onClick={() => addNote(title, note)}>
+							Create
+							<i className="material-icons right">send</i>
+						</button>
+					</Link>
 				</div>
 			</div>
 		</div>
@@ -50,4 +51,7 @@ const mapDispatchToProps = (dispatch) => {
 	);
 };
 
-export default connect(mapDispatchToProps)(NewNote);
+export default connect(
+	null,
+	mapDispatchToProps
+)(NewNote);
