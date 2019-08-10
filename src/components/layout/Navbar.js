@@ -9,7 +9,7 @@ export default function Navbar() {
 						<span className="brand-logo">Noap</span>
 						<ul className="right hide-on-med-and-down">
 							<li>
-								<Link to="/">Notes</Link>
+								<Link to="/notes">Notes</Link>
 							</li>
 							<li>
 								<Link to="/new_note">New Note</Link>
