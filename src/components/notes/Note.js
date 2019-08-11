@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 function Note({ title, note, index, deleteNote }) {
 	return (
-		<div className="col s6">
+		<div className="col s12 m6">
 			<div className="card indigo lighten-2">
 				<div className="card-content white-text">
 					<div className="row">
