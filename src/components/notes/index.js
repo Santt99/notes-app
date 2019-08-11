@@ -7,7 +7,7 @@ function NotesList({ notes }) {
 		return (
 			<div className="row">
 				{notes.map(({ title, note }, index) => {
-					return <Note title={title} note={note} key={index} />;
+					return <Note title={title} note={note} key={index} index={index} />;
 				})}
 			</div>
 		);
