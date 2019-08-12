@@ -6,10 +6,10 @@ export default function Navbar() {
 			<nav className="indigo darken-4">
 				<div className="container">
 					<div className="row">
-						<div className="col s6 m8 l9">
+						<div className="col s5 m8 l9">
 							<span className="brand-logo left">Noap</span>
 						</div>
-						<div className="col s6 m4 l3">
+						<div className="col s7 m4 l3">
 							<ul>
 								<li>
 									<Link to="/notes">Notes</Link>
