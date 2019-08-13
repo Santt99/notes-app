@@ -8,5 +8,5 @@ export const deleteNote = (index) => (dispatch) => {
 	return dispatch({ type: NOTE_DELETE, payload: index });
 };
 export const editNote = (title, note, index) => {
-	return { type: NOTE_ADD, payload: { note: { title, note }, id: index } };
+	return { type: NOTE_EDIT, payload: { note: { title, note }, id: index } };
 };

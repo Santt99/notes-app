@@ -10,9 +10,10 @@ export default (state = initialState, action) => {
 		const deletedNote = state.splice(payload, 1);
 		state = state.filter((note) => note !== deletedNote);
 	} else if (type === NOTE_EDIT) {
-		console.log(payload);
-		// state[id] = note;
-		console.log(state);
+		let { id, note } = payload;
+		let newState = [...state];
+		newState.splice(id, 1, note);
+		state = newState;
 	}
 	return state;
 };
