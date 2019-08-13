@@ -1,4 +1,4 @@
-import { NOTE_ADD, NOTE_DELETE } from '../actions';
+import { NOTE_ADD, NOTE_DELETE, NOTE_EDIT } from '../actions';
 
 const initialState = [];
 
@@ -9,6 +9,10 @@ export default (state = initialState, action) => {
 	} else if (type === NOTE_DELETE) {
 		const deletedNote = state.splice(payload, 1);
 		state = state.filter((note) => note !== deletedNote);
+	} else if (type === NOTE_EDIT) {
+		console.log(payload);
+		// state[id] = note;
+		console.log(state);
 	}
 	return state;
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import * as Actions from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Link } from 'react-router-dom';
 function Note({ title, note, index, deleteNote }) {
 	return (
 		<div className="col s12 m6">
@@ -13,11 +14,20 @@ function Note({ title, note, index, deleteNote }) {
 							<p>{note}</p>
 						</div>
 						<div className="col s3">
-							<a
-								className="btn-floating btn-large waves-effect waves-light red"
-								onClick={() => deleteNote(index)}>
-								<i className="material-icons">delete</i>
-							</a>
+							<div className="row">
+								<a
+									className="btn-floating btn-large waves-effect waves-light red"
+									onClick={() => deleteNote(index)}>
+									<i className="material-icons rigth">delete</i>
+								</a>
+							</div>
+							<div className="row">
+								<Link to={`/edit_note/${index}`}>
+									<span className="btn-floating btn-large waves-effect waves-light red">
+										<i className="material-icons rigth">edit</i>
+									</span>
+								</Link>
+							</div>
 						</div>
 					</div>
 				</div>

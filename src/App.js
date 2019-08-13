@@ -8,6 +8,7 @@ import NewNote from './components/notes/NewNote';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import config from './configure/store';
+import EditNote from './components/notes/EditNote';
 
 const App = () => {
 	let { store, persistor } = config();
@@ -28,6 +29,12 @@ const App = () => {
 							path="/new_note"
 							render={(props) => {
 								return <NewNote {...props} />;
+							}}
+						/>
+						<Route
+							path="/edit_note/:noteIndex"
+							render={(props) => {
+								return <EditNote {...props} />;
 							}}
 						/>
 					</div>
